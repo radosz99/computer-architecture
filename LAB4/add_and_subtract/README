@@ -1,0 +1,27 @@
+Program dodający i odejmujący 2 liczby zmiennoprzecinkowe formatu single (32 bity):
+
+
+Opis algorytmu (w nawiasie nr linijki kodu):
+
+(152 i 245) Wczytywane są od użytkownika 2 ciągi 32-bitowe (akceptuje tylko znaki '0' i '1' i ciągi 32-znakowe).
+
+(187 i 280) Pierwszy znak z pierwszej liczby zapisuje do sign_1, a pierwszy znak z drugiej liczby zapisuje do sign_2.
+
+(193 i 287) Następne 8 znaków (wykładnik) zapisuje do stringa odpowiednio exponent_1 i exponent_2 oraz za pomocą funkcji
+convertBuffer zapisuje rzeczywiste wartości wykładników (po odjęciu obciążenia 01111111) do valueExponent_1 oraz
+valueExponent_2.
+
+(225 i 313) Następne 23 znaki są zapisywane do fraction_1 i fraction_2 oraz ich liczbowe wartości do valueFraction_1 i valueFraction_2
+Następnie w whichIsBigger sprawdzamy, która liczba jest większa (która ma większy wykładnik)
+
+(351) Obie liczby sprawdzane są pod kątem bycia NaN bądź zdenormalizowania.
+
+(394) Wyświetlane jest menu, w którym użytkownik wybiera operację - dodawanie lub odejmowanie. 
+
+(424) Obie liczby są wyświetlane (funkcja makingResultNumber) w postaci X|YYYYYYYY|ZZZZZZZZZZZZZZZZZZZZZZZ.
+
+(456) Określane jest czy trzeba wykonywać działanie, gdyż jeśli różnica między wartościami wykładników jes większa niż 23 to wystarczy wyświetlić
+    liczbę o większym wykładniku
+
+
+

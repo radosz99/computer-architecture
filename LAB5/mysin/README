@@ -1,0 +1,6 @@
+Uruchamianie w konsoli:
+
+as sin.s -o sin.o -g --32
+gcc -o wypisz wypisz.c sin.o -m32
+./wypisz
+

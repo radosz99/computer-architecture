@@ -1,0 +1,18 @@
+Napisać program drukujący na standardowe wyjście:
+parametry swojego wywołania (w tym ścieżkę do programu)
+zawartość środowiska (to samo, co komenda export)
+
+wskazówka: zapoznać się z zawartością stosu w momencie uruchomienia “funkcji” _start
+
+Napisać program dodający/odejmujący dwie liczby o dowolnej precyzji (“dowolnej” oznacza powyżej 64 bitów).
+Napisać program mnożący/dzielący liczby o precyzji jw.
+
+Wejście/wyjście dla programów jw:
+Ze standardowego wejścia/wyjścia, cyfry w bazie 16
+Ze standardowego wejścia/wyjścia, cyfry dziesiętne
+
+Wczytywanie liczb zrealizowane z wykorzystaniem (zaimplementować wszystkie opcje):
+int $0x80 - z wykorzystaniem funkcji systemu operacyjnego
+printf/scanf (trzeba opanować wywoływanie funkcji z biblioteki)
+(tylko wczytywanie) podanych jako parametry programu i/lub zmienne środowiskowe
+

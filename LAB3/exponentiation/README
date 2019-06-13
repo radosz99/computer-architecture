@@ -1,0 +1,40 @@
+Program wykonujący potęgowanie, na postawie liczby i wykładnika podanego na standardowe wejście.
+Zaimplementowany algorytm szybkiego potęgowania cechuje złożność O(log n), pozwalająca znacznie zredukować ilość mnożeń w stosunku do zwykłego potęgowania.
+Obliczenia mogą być zrealizowane w 3 systemach - (b) binarny, (d) decymalny oraz (h) heksadecymalny.
+
+Algorytm jest następujący:
+1) Na standardowe wejście wczytywana jest liczba i wykładnik
+2) Wykładnik jest przekształcany do postaci binarnej, tworzona jest etykieta result, pod którą jest liczba 1 oraz tworzona jest etykieta tempPower, pod którą
+jest liczba, którą będziemy potęgować
+3) W etykiecie checkIfMultiplicationIsNecessary sprawdzamy zawartość wykładnika w binarnej postaci od ostatniego znaku - jeśli jest nim jedynka to przechodzimy do kroku nr 5, a jeśli jest nim 0 to do kroku nr 4 oraz inkrementujemy licznik, który przechodzi po wykładniku
+4) Mnożymy zawartość result * tempPower i zachowujemy wynik w result, przy czym sprawdzane jest czy nie doszliśmy do końca wykładnika - jeśli tak to skok do 7
+5) Mnożymy tempPower * tempPower i zachowujemy wynik w tempPower
+6) Wracamy do kroku nr 3
+7) Wyświetlenie result
+
+Na przykładzie:
+
+56^13 = 56^(1101)b
+
+w result mamy 1
+w tempPower mamy 56
+
+Ostatnia pozycja w wykładniku to 1 czyli mnożymy result * tempPower:
+result = 1 * 56 = 56
+
+i mnożymy tempPower * tempPower:
+tempPower = 56 * 56 = 56^2
+
+na poprzedniej pozycji w wykładniku mamy 0 czyli znów mnożymy tempPower * tempPower:
+tempPower = 56^2 * 56^2 = 56^4
+
+poprzednia pozycja w wykładniku to tym razem 1 czyli mnożymy result * tempPower:
+result = 56 * 56^4 = 56^5
+
+i mnożymy tempPower * tempPower:
+tempPower = 56^4 * 56^4 = 56^8
+
+dochodzimy do ostatniej jedynki w wykładniku (pierwszej) i mnożymy result * tempPower:
+result = 56^5 * 56^8 = 56^13
+
+I w ten sposób dochodzimy do ostatecznego wyniku, znacznie redukując pierwotną liczbę mnożeń z 12 aż do 6

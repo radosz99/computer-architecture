@@ -1,0 +1,15 @@
+Napisać program obliczający wartość całki oznaczonej funkcji sin(x), log(x)
+granice zadawane ze standardowego wejścia
+
+Wynik wypisywany na standardowe wyjście
+Użyć jednostki zmiennoprzecinkowej (rozkazów/rejestrów)
+Użyć funkcji printf/scanf z poziomu kodu w asemblerze
+
+Zdefiniować funkcję my_sin wykorzystującą rozkaz fsin i udostępnić ją na poziomie interfejsu języka C
+Opisać ramkę stosu (parametry, zmienne lokalne, redzone)
+Zdefiniować funkcje rejestrów parametrów i wyniku
+
+Napisać program drukujący bieżący ślad stosu (stack trace)
+
+Zmierzyć czas wykonania fragmentu kodu z wykorzystaniem rozkazu rdtsc
+
